@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  max-width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: changeimage 20s infinite ease-in-out;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 12vh;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+  width: 25%;
+  text-align: center;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+nav .menu a {
+  display: block;
+  width: 25%;
+  padding: 31px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav .menu a:first-child {
+  background-color: rgb(22, 195, 207);
+}
+
+nav .menu a:hover {
+  color: rgb(226, 218, 26);
+  background-color: rgb(86, 145, 103);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85vh;
+  text-align: center;
+  color: white;
+}
+
+section h3 {
+  letter-spacing: 5px;
+  text-shadow: 1px 2px 2px black;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+section h1 {
+  margin: 30px 0 20px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 5px black;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+section p {
+  margin-bottom: 25px;
+  word-spacing: 2px;
+  text-shadow: 1px 1px 2px black;
+  font-size: 25px;
+}
+
+section a {
+  padding: 12px 30px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+section .button1 {
+  color: black;
+  background-color: white;
+}
+
+section .button1:hover {
+  color: white;
+  background-color: rgba(0, 161, 132, 0.96);
+}
+
+section .button2 {
+  padding: 12px 45px;
+  color: white;
+  background-color: rgba(0, 161, 132, 0.96);
+}
+
+section .button2:hover {
+  color: black;
+  background-color: white;
+}
+
+.change_content::after {
+  content: "";
+  animation: changetext 20s infinite ease-in-out;
+  color: rgba(0, 161, 132, 0.96);
+}
+
+@keyframes changetext {
+  0%{content: "DELHI";}
+  20%{content: "MUMBAI";}
+  35%{content: "KOLKATA";}
+  60%{content: "KASHMIR";}
+  80%{content: "RAJASTHAN";}
+  100%{content: "DARJEELING";}
+}
+
+@keyframes changeimage {
+  0%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('taj.jpg');}
+  20%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('mumbai.jpg');}
+  35%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('kolkata.jpg');}
+  60%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('kashmir.jpg');}
+  80%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('rajasthan.jpg');}
+  100%{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('darjeeling.jpg');}
+}
